@@ -1,0 +1,170 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include _head.html %}
+</head>
+
+<body class="page">
+<style>
+    /*********************************
+     The list of publication items
+     *********************************/
+/* The list of items */
+.biblist { }
+
+/* The item */
+.biblist li { }
+.biblist .authorme  {border-bottom: 1px dotted #b3b3b3;}
+
+/* You can define custom styles for plstyle field here. */
+
+
+/*************************************
+ The box that contain BibTeX code
+ *************************************/
+div.noshow { display: none; }
+div.bibtex {
+	margin-right: 0%;
+	margin-top: 1.2em;
+	margin-bottom: 1em;
+	border: 1px solid silver;
+	padding: 0em 1em;
+	background: #ffffee;
+}
+div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; padding: 0em 0em;}</style>
+<script type="text/javascript">
+    <!--
+    // Toggle Display of BibTeX
+    function toggleBibtex(articleid) {
+        var bib = document.getElementById('bib_'+articleid);
+        if (bib) {
+            if(bib.className.indexOf('bibtex') != -1) {
+                bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+            }
+        } else {
+            return;
+        }
+    }
+-->
+    </script>
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+{% if page.image.feature %}
+  <div class="image-wrap">
+  <img src=
+    {% if page.image.feature contains 'http://' %}
+      "{{ page.image.feature }}"
+    {% elsif page.image.feature contains 'https://' %}
+      "{{ page.image.feature }}"
+    {% else %}
+      "{{ site.url }}/images/{{ page.image.feature }}"
+    {% endif %}
+  alt="{{ page.title }} feature image">
+  {% if page.image.credit %}
+    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  {% endif %}
+  </div><!-- /.image-wrap -->
+{% endif %}
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    {% include _author-bio.html %}
+  </div>
+  <article>
+    <h1>{{ page.title }}</h1>
+    <div class="article-wrap">
+      {{ content }}
+	    
+		<h1> Thesis 📚</h1>
+	    <br>
+<!-- Generated from JabRef by PubList by Truong Nghiem at 09:38 on 2017.02.07. -->
+<ul class="biblist" style="margin-top:-2px;">
+	    
+	    <!-- Item: rafanellipptTH -->
+	<li >
+	<span class="authorme">A. Rafanelli</span>,
+	&ldquo;<b><em>Dynamic Pricing under competition in an e-commerce scenario: a demand learning and price optimization technique</em></b>&rdquo;,
+	<i> Msc thesis</i>, 2020.
+	<br>
+	<a href="/publications/ppt/msc_thesis.pdf">[PDF]</a>
+	</li>
+	<br>
+	    </ul>
+	    <h1> Workshops ✍🏻</h1>
+	    <br>
+<!-- Generated from JabRef by PubList by Truong Nghiem at 09:38 on 2017.02.07. -->
+<ul class="biblist" style="margin-top:-2px;">
+	<!-- Item: rafanelliWOA22 -->
+	<li >
+	<span class="authorme">A. Agiollo, A. Rafanelli</span> and A. Omicini,
+	&ldquo;<b><em>Towards Quality-of-Service Metrics for Symbolic Knowledge Injection</em></b>&rdquo;,
+	<i>23rd Workshop “From Objects to Agents” (WOA)</i>, 2022.
+	<br>
+	<a href="javascript:toggleBibtex('rafanelliWOA22')">[BibTeX]</a>
+
+	<a href="/publications/2022/rafanelliWOA22.pdf">[PDF]</a>
+
+        <a href="/publications/2022/rafanelliSlidesWOA22.pdf">[SLIDES]</a>
+
+	<div id="bib_rafanelliWOA22" class="bibtex noshow">
+	<pre>
+	@article{rafanelliWOA22,
+	  author = {Agiollo, A. and Rafanelli, A. and Omicini, A.},
+	  title = {Towards Quality-of-Service Metrics for Symbolic Knowledge Injection},
+	  journal = {23rd Workshop “From Objects to Agents” (WOA)},
+	  year = {2022}
+	}
+	</pre>
+	</div>
+	</li>
+	<br>
+	<!-- Item: rafanelliWOA22.2 -->
+	<li >
+	<span class="authorme">A. Rafanelli</span>, S. Costantini and G. De Gasperis
+	&ldquo;<b><em>A Multi-Agent-System framework for flooding events</em></b>&rdquo;,
+	<i>23rd Workshop “From Objects to Agents” (WOA)</i>, 2022.
+	<br>
+	<a href="javascript:toggleBibtex('rafanelliWOA22.2')">[BibTeX]</a>
+
+	<a href="/publications/2022/rafanelliWOA22.2.pdf">[PDF]</a>
+
+        <a href="/publications/2022/rafanelliSlidesWOA22.2.pdf">[SLIDES]</a>
+
+	<div id="bib_rafanelliWOA22.2" class="bibtex noshow">
+	<pre>
+	@article{rafanelliWOA22,
+	  author = {Rafanelli, A. and Costantini, S. and De Gasperis G.},
+	  title = {A Multi-Agent-System framework for flooding events},
+	  journal = {23rd Workshop “From Objects to Agents” (WOA)},
+	  year = {2022}
+	}
+	</pre>
+	</div>
+	</li>
+</ul>
+</pre></div>
+</li>
+</ol>
+
+<!-- /.article-wrap -->
+    {% if site.disqus_shortname and page.comments %}
+      <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    {% endif %}
+  </article>
+</div><!-- /#index -->
+<div class="footer-wrap">
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
+
+{% include _scripts.html %}
+
+</body>
+</html>

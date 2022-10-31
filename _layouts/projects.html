@@ -1,0 +1,132 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include _head.html %}
+</head>
+
+<body class="page">
+    </script>
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+{% if page.image.feature %}
+  <div class="image-wrap">
+  <img src=
+    {% if page.image.feature contains 'http://' %}
+      "{{ page.image.feature }}"
+    {% elsif page.image.feature contains 'https://' %}
+      "{{ page.image.feature }}"
+    {% else %}
+      "{{ site.url }}/images/{{ page.image.feature }}"
+    {% endif %}
+  alt="{{ page.title }} feature image">
+  {% if page.image.credit %}
+    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  {% endif %}
+  </div><!-- /.image-wrap -->
+{% endif %}
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    {% include _author-bio.html %}
+  </div>
+  <article>
+    <h1>{{ page.title }}</h1>
+    <div class="article-wrap">
+      {{ content }}
+
+	    
+<h1> Talks 📌</h1>
+	    <br>
+<h4 style="margin-bottom:0px;padding-top:10px; margin-top:-10px;"></h4>
+<ul class="biblist" style="margin-top:-2px;">
+	<!-- Item: rafanellitalk.1 -->
+	<li >
+	<span class="authorme"> W. Zhou Dai, Q. Xu, Y. Yu, Z. Zhou</span>, 
+		
+	&ldquo;<b><em>Bridging Machine Learning and Logical Reasoning
+by Abductive Learning</em></b>&rdquo;, NeurIPS 2019. 
+	<br>
+        <a href="/publications/ppt/abl.pdf">[PDF]</a>
+	</li>
+	<br>
+	<!-- Item: rafanellitalk.2 -->
+	<li >
+	<span class="authorme">A. Rafanelli</span>, 
+	&ldquo;<b><em>Towards the integration of symbolic and deep learning systems:
+the Neuro-Symbolic approach.</em></b>&rdquo;, 2022. 
+	<br>
+        <a href="/publications/ppt/nesy.pdf">[PDF]</a>
+	    </ul>
+	    <br>
+<h1> Projects 💡</h1>
+	    <br>
+<h4 style="margin-bottom:0px;padding-top:10px; margin-top:-10px;"></h4>
+<ul class="biblist" style="margin-top:-2px;">
+	<!-- Item: rafanellippt.3 -->
+	<li >
+	<span class="authorme">A. Rafanelli, E. Cappuccio, G. Camarda</span>, 
+	&ldquo;<b><em>AI 4 Covid</em></b>&rdquo;, 2022. 
+	<br>
+	<img src="../images/python.svg" width="20" height="20">
+	<a href='https://github.com/andrearafanelli/CNN-Flower-recognition'>[CODE]</a>
+        <a href="/publications/ppt/AI_4_COVID.pdf">[PDF]</a>
+	
+	</li>
+	<br>
+	<!-- Item: rafanellippt.3 -->
+	<li >
+	<span class="authorme">A. Rafanelli</span>,
+	&ldquo;<b><em>Flowers recognition</em></b>&rdquo;, 2020. 
+	<br>
+	<img src="../images/python.svg" width="20" height="20">
+	<a href='https://github.com/andrearafanelli/CNN-Flower-recognition'>[CODE]</a>
+	<a href="/publications/ppt/flowers_recognition.pdf">[SLIDES]</a>
+	</li>
+	<br>
+	
+	<!-- Item: rafanellippt.2 -->
+	<li >
+	<span class="authorme">A. Rafanelli</span>,
+	&ldquo;<b><em>Marketing analysis</em></b>&rdquo;, 2020.  
+	<br>
+	<img src="../images/python.svg" width="20" height="20">
+	<a href='https://github.com/andrearafanelli/Marketing-analysis'>[CODE]</a>
+	<a href="/publications/ppt/cervical_cancer.pdf">[SLIDES]</a>
+	</li>
+	<br>
+	<!-- Item: rafanellippt.1 -->
+	<li >
+	<span class="authorme">A. Rafanelli</span>,
+	&ldquo;<b><em>Cervical cancer detection</em></b>&rdquo;, 2020.  
+	<br>
+	<img src="../images/r-project.svg" width="20" height="20">
+	<a href='https://github.com/andrearafanelli/Medical-analysis-Cervical-cancer-detection-'>[CODE]</a>
+        <a href="/publications/ppt/cervical_cancer.pdf">[SLIDES]</a>
+	</li>
+</ul>
+</div>
+</li>
+</ol>
+
+<!-- /.article-wrap -->
+    {% if site.disqus_shortname and page.comments %}
+      <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    {% endif %}
+  </article>
+</div><!-- /#index -->
+<div class="footer-wrap">
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
+
+{% include _scripts.html %}
+
+</body>
+</html>
