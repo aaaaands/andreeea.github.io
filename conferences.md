@@ -4,6 +4,7 @@ title: Conferences 👩🏻‍💻
 ---
 
 ## as partecipant
+  * [**AIxIA22**](https://aixia2022.uniud.it), 21st International Conference of the Italian Association for Artificial Intelligence.
   * [**WOA22**](https://sites.google.com/view/woa2022), 23rd Workshop "From Objects to Agents".
  <br>
  
