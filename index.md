@@ -18,6 +18,5 @@ I obtained my master's degree in Data Analytics from the [**Catholic University 
 <br/>
 
 ## Tech Skills 💻
-<img src="../images/python.svg" width="50" height="50"> <img src="../images/pytorch.png" width="50" height="50"> <img src="../images/tf.png" width="50" height="50"> <img src="../images/r-project.svg" width="50" height="50"> <img src="../images/prolog.png" width="50" height="50"> <img src="../images/mysql.svg" width="50" height="50"> <img src="../images/mongodb.svg" width="50" height="50"> <img src="../images/html.png" width="50" height="50">
-<img src="../images/css.png" width="50" height="50">
+<img src="../images/python.svg" width="50" height="50"> <img src="../images/pytorch.png" width="50" height="50"> <img src="../images/tf.png" width="50" height="50"> <img src="../images/r-project.svg" width="50" height="50"> <img src="../images/prolog.png" width="50" height="50"> 
 
