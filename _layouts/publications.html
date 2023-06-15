@@ -1,7 +1,14 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
 {% include _head.html %}
+</head>
+
+<body class="page">
 <style>
-
-
     /*********************************
      The list of publication items
      *********************************/
@@ -20,15 +27,14 @@
  *************************************/
 div.noshow { display: none; }
 div.bibtex {
-        margin-right: 0%;
-        margin-top: 1.2em;
-        margin-bottom: 1em;
-        border: 1px solid silver;
-        padding: 0em 1em;
-        background: #ffffee;
+	margin-right: 0%;
+	margin-top: 1.2em;
+	margin-bottom: 1em;
+	border: 1px solid silver;
+	padding: 0em 1em;
+	background: #ffffee;
 }
-div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; padding: 0em 0em;}
-</style>
+div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; padding: 0em 0em;}</style>
 <script type="text/javascript">
     <!--
     // Toggle Display of BibTeX
@@ -43,11 +49,29 @@ div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; padding: 0em 0em;
         }
     }
 -->
-</script> {% include _browser-upgrade.html %} {% include _navigation.html %} {% if page.image.feature %}
-<div class="image-wrap">
-  <img src="{%" if="" elsif="" contains="https://'" else="" site.url="" page.image.feature="" endif="" alt="{{ page.title }} feature image"> {% if page.image.credit %} <span class="image-credit">Photo Credit: <a href="{{%20page.image.creditlink%20}}">{{ page.image.credit }}</a></span> {% endif %}
-</div><!-- /.image-wrap -->
+    </script>
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+{% if page.image.feature %}
+  <div class="image-wrap">
+  <img src=
+    {% if page.image.feature contains 'http://' %}
+      "{{ page.image.feature }}"
+    {% elsif page.image.feature contains 'https://' %}
+      "{{ page.image.feature }}"
+    {% else %}
+      "{{ site.url }}/images/{{ page.image.feature }}"
+    {% endif %}
+  alt="{{ page.title }} feature image">
+  {% if page.image.credit %}
+    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  {% endif %}
+  </div><!-- /.image-wrap -->
 {% endif %}
+
 <div id="main" role="main">
   <div class="article-author-side">
     {% include _author-bio.html %}
@@ -56,92 +80,128 @@ div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; padding: 0em 0em;
     <h1>{{ page.title }}</h1>
     <div class="article-wrap">
       {{ content }}
-      <h1>Journals 📖</h1><br>
-      <ul class="biblist" style="margin-top:-2px;">
-        <!-- Item: rafanelliAI23 -->
-        <li>
-          <span class="authorme">A. Rafanelli</span>, S.Costantini and G. De Gasperis, “<b><em>Neural-logic Multi-agent System for Flood Event Detection</em></b>”, <i>Intelligenza Artificale</i>, 2023.<br>
-          <a href="https://content.iospress.com/articles/intelligenza-artificiale/ia230004">[LINK]</a>
-        </li><br>
-      </ul>
-      <h1>Conferences 📚</h1><br>
-      <ul class="biblist" style="margin-top:-2px;">
-        <!-- Item: rafanelliAixia22 -->
-        <li>
-          <span class="authorme">A. Rafanelli</span>, S.Costantini and A. Omicini, “<b><em>Position paper: On the role of abductive reasoning in semantic image segmentation</em></b>”, <i>21st International Conference of the Italian Association for Artificial Intelligence (AIxIA 2022)</i> , 2022.<br>
-          <a href="javascript:toggleBibtex('rafanelliAixia22')">[BibTeX]</a> <a href="/publications/2022/aixia22.pdf">[PDF]</a> <a href="/publications/2022/aixia22Slides.pdf">[SLIDES]</a>
-          <div id="bib_rafanelliWOA22" class="bibtex noshow">
-            <pre>
-        @article{aixia2022,
-        author = {Rafanelli, Andrea and Costantini, Stefania and Omicini, Andrea},
-        booktitle = {21st International Conference of the Italian Association for Artificial Intelligence (AIxIA 2022) },
-        publisher = {Sun SITE Central Europe, RWTH Aachen University},
-        series = {CEUR Workshop Proceedings},
-        subseries = {AIxIA Series},
-        title = {Position paper: On the role of abductive reasoning in semantic image segmentation},
-        }       
-        </pre>
-          </div>
-        </li><br>
-      </ul>
-      <h1>Workshops ✍🏻</h1><br>
-      <ul class="biblist" style="margin-top:-2px;">
-        <!-- Item: rafanelliWOA22 -->
-        <li>
-          <span class="authorme">A. Agiollo, A. Rafanelli</span> and A. Omicini, “<b><em>Towards Quality-of-Service Metrics for Symbolic Knowledge Injection</em></b>”, <i>23rd Workshop “From Objects to Agents” (WOA)</i>, 2022.<br>
-          <a href="javascript:toggleBibtex('rafanelliWOA22')">[BibTeX]</a> <a href="/publications/2022/rafanelliWOA22.pdf">[PDF]</a> <a href="/publications/2022/rafanelliSlidesWOA22.pdf">[SLIDES]</a>
-          <div id="bib_rafanelliWOA22" class="bibtex noshow">
-            <pre>
-        @article{skiqs-woa2022,
-        author = {Agiollo, Andrea and Rafanelli, Andrea and Omicini, Andrea},
-        booktitle = {WOA 2022 -- 23rd Workshop ``From Objects to Agents''},
-        editor = {Ferrando, Angelo and Mascardi, Viviana},
-        issn = {1613-0073},
-        keywords = { symbolic knowledge injection, quality of service, efficiency, understandability, robustness},
-        month = nov,
-        pages = {30--47},
-        publisher = {Sun SITE Central Europe, RWTH Aachen University},
-        series = {CEUR Workshop Proceedings},
-        subseries = {AIxIA Series},
-        title = {Towards Quality-of-Service Metrics for Symbolic Knowledge Injection},
-        url = {http://ceur-ws.org/Vol-3261/paper3.pdf},
-        url-pdf = {http://ceur-ws.org/Vol-3261/paper3.pdf},
-        volume = 3261,
-        year = 2022} 
-        
-        </pre>
-          </div>
-        </li><br>
-        <!-- Item: rafanelliWOA22.2 -->
-        <li>
-          <span class="authorme">A. Rafanelli</span>, S. Costantini and G. De Gasperis “<b><em>A Multi-Agent-System framework for flooding events</em></b>”, <i>23rd Workshop “From Objects to Agents” (WOA)</i>, 2022.<br>
-          <a href="javascript:toggleBibtex('rafanelliWOA22.2')">[BibTeX]</a> <a href="/publications/2022/rafanelliWOA22.2.pdf">[PDF]</a> <a href="/publications/2022/rafanelliSlidesWOA22.2.pdf">[SLIDES]</a>
-          <div id="bib_rafanelliWOA22.2" class="bibtex noshow">
-            <pre>
-        @article{mas-woa2022,
-        author = {Rafanelli, Andrea and Costantini, Stefania and De Gasperis, Giovanni},
-        booktitle = {WOA 2022 -- 23rd Workshop ``From Objects to Agents''},
-        editor = {Ferrando, Angelo and Mascardi, Viviana},
-        issn = {1613-0073},
-        keywords = {multi-agent-system, DALI, logic programming, PSP-Net, symbolic sub-symbolic integration},
-        month = nov,
-        pages = {30--47},
-        publisher = {Sun SITE Central Europe, RWTH Aachen University},
-        series = {CEUR Workshop Proceedings},
-        subseries = {AIxIA Series},
-        title = {A Multi-Agent-System framework for flooding events},
-        url = {http://ceur-ws.org/Vol-3261/paper11.pdf},
-        url-pdf = {http://ceur-ws.org/Vol-3261/paper11.pdf},
-        volume = 3261,
-        year = 2022} 
-        
-        </pre>
-          </div>
-        </li>
-      </ul>
-    </div><!-- /.article-wrap -->
+	
+	    <h1> Journals 📖</h1>
+	   	    <br>
+<ul class="biblist" style="margin-top:-2px;">
+	<!-- Item: rafanelliAI23 -->
+	<li >
+	<span class="authorme">A. Rafanelli</span>, S.Costantini and G. De Gasperis,
+	&ldquo;<b><em>Neural-logic Multi-agent System for Flood Event Detection</em></b>&rdquo;,
+	<i>Intelligenza Artificale</i>, 2023.
+	<br>
+	<a href="https://content.iospress.com/articles/intelligenza-artificiale/ia230004">[Link]</a>
+	</li>
+	<br>
+	    </ul>
+	    <h1> Conferences 📚</h1>
+	    <br>
+<ul class="biblist" style="margin-top:-2px;">
+	<!-- Item: rafanelliAixia22 -->
+	<li >
+	<span class="authorme">A. Rafanelli</span>, S.Costantini and A. Omicini,
+	&ldquo;<b><em>Position paper: On the role of abductive reasoning in semantic image segmentation</em></b>&rdquo;,
+	<i>21st International Conference of the Italian Association for Artificial Intelligence (AIxIA 2022) </i>, 2022.
+	<br>
+	<a href="javascript:toggleBibtex('rafanelliAixia22')">[BibTeX]</a>
+
+	<a href="/publications/2022/aixia22.pdf">[PDF]</a>
+
+        <a href="/publications/2022/aixia22Slides.pdf">[SLIDES]</a>
+
+	<div id="bib_rafanelliWOA22" class="bibtex noshow">
+	<pre>
+	@article{aixia2022,
+	author = {Rafanelli, Andrea and Costantini, Stefania and Omicini, Andrea},
+	booktitle = {21st International Conference of the Italian Association for Artificial Intelligence (AIxIA 2022) },
+	publisher = {Sun SITE Central Europe, RWTH Aachen University},
+	series = {CEUR Workshop Proceedings},
+	subseries = {AIxIA Series},
+	title = {Position paper: On the role of abductive reasoning in semantic image segmentation},
+	} 	
+	</li>
+	<br>
+	    </ul>
+	    <h1> Workshops ✍🏻</h1>
+	    <br>
+<ul class="biblist" style="margin-top:-2px;">
+	<!-- Item: rafanelliWOA22 -->
+	<li >
+	<span class="authorme">A. Agiollo, A. Rafanelli</span> and A. Omicini,
+	&ldquo;<b><em>Towards Quality-of-Service Metrics for Symbolic Knowledge Injection</em></b>&rdquo;,
+	<i>23rd Workshop “From Objects to Agents” (WOA)</i>, 2022.
+	<br>
+	<a href="javascript:toggleBibtex('rafanelliWOA22')">[BibTeX]</a>
+
+	<a href="/publications/2022/rafanelliWOA22.pdf">[PDF]</a>
+
+        <a href="/publications/2022/rafanelliSlidesWOA22.pdf">[SLIDES]</a>
+
+	<div id="bib_rafanelliWOA22" class="bibtex noshow">
+	<pre>
+	@article{skiqs-woa2022,
+	author = {Agiollo, Andrea and Rafanelli, Andrea and Omicini, Andrea},
+	booktitle = {WOA 2022 -- 23rd Workshop ``From Objects to Agents''},
+	editor = {Ferrando, Angelo and Mascardi, Viviana},
+	issn = {1613-0073},
+	keywords = { symbolic knowledge injection, quality of service, efficiency, understandability, robustness},
+	month = nov,
+	pages = {30--47},
+	publisher = {Sun SITE Central Europe, RWTH Aachen University},
+	series = {CEUR Workshop Proceedings},
+	subseries = {AIxIA Series},
+	title = {Towards Quality-of-Service Metrics for Symbolic Knowledge Injection},
+	url = {http://ceur-ws.org/Vol-3261/paper3.pdf},
+	url-pdf = {http://ceur-ws.org/Vol-3261/paper3.pdf},
+	volume = 3261,
+	year = 2022} 
+	
+	</pre>
+	</div>
+	</li>
+	<br>
+	<!-- Item: rafanelliWOA22.2 -->
+	<li >
+	<span class="authorme">A. Rafanelli</span>, S. Costantini and G. De Gasperis
+	&ldquo;<b><em>A Multi-Agent-System framework for flooding events</em></b>&rdquo;,
+	<i>23rd Workshop “From Objects to Agents” (WOA)</i>, 2022.
+	<br>
+	<a href="javascript:toggleBibtex('rafanelliWOA22.2')">[BibTeX]</a>
+
+	<a href="/publications/2022/rafanelliWOA22.2.pdf">[PDF]</a>
+
+        <a href="/publications/2022/rafanelliSlidesWOA22.2.pdf">[SLIDES]</a>
+
+	<div id="bib_rafanelliWOA22.2" class="bibtex noshow">
+	<pre>
+	@article{mas-woa2022,
+	author = {Rafanelli, Andrea and Costantini, Stefania and De Gasperis, Giovanni},
+	booktitle = {WOA 2022 -- 23rd Workshop ``From Objects to Agents''},
+	editor = {Ferrando, Angelo and Mascardi, Viviana},
+	issn = {1613-0073},
+	keywords = {multi-agent-system, DALI, logic programming, PSP-Net, symbolic sub-symbolic integration},
+	month = nov,
+	pages = {30--47},
+	publisher = {Sun SITE Central Europe, RWTH Aachen University},
+	series = {CEUR Workshop Proceedings},
+	subseries = {AIxIA Series},
+	title = {A Multi-Agent-System framework for flooding events},
+	url = {http://ceur-ws.org/Vol-3261/paper11.pdf},
+	url-pdf = {http://ceur-ws.org/Vol-3261/paper11.pdf},
+	volume = 3261,
+	year = 2022} 
+	
+	</pre>
+	</div>
+	</li>
+</ul>
+</pre></div>
+</li>
+</ol>
+
+<!-- /.article-wrap -->
     {% if site.disqus_shortname and page.comments %}
-    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+      <section id="disqus_thread"></section><!-- /#disqus_thread -->
     {% endif %}
   </article>
 </div><!-- /#index -->
@@ -150,4 +210,8 @@ div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; padding: 0em 0em;
     {% include _footer.html %}
   </footer>
 </div><!-- /.footer-wrap -->
+
 {% include _scripts.html %}
+
+</body>
+</html>
