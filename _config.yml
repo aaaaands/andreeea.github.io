@@ -2,37 +2,21 @@ title:            A journey always starts with a single step
 mytitle:          Andrea R.
 description:      Welcome to my website.
 yearstart: 2017
-# Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              //andrearafanelli.github.io
-#http://localhost:5000
-#https://jponttuset.github.io
 disqus_shortname: ands
 
-
-# Owner/author information
 owner:
   name:           Andrea Rafanelli
   avatar:         photo.jpg.png
   bio:           #
   email:          #
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
   linkedin: andrea-rafanelli
   google_scholar: https://scholar.google.com/citations?user=vSrDrMMAAAAJ
   semantic_scholar: https://www.semanticscholar.org/author/2189578924
   dblb: https://dblp.org/pid/332/1524.html
   google_plus: #
   github: andrearafanelli
-# Analytics and webmaster tools stuff goes here
-google_analytics: #
-google_verify:
-#
-bing_verify:
-
-# Links to include in top navigation
-# For external links add external: true
 links:
-  - title: Conferences
-    url: /conferences/
   - title: Publications
     url: /publications/
   - title: Extra
@@ -41,21 +25,15 @@ links:
     url: /cv/
   - title: Contact
     url: /contact/
- 
-  - title: #Code
-    url: #/code/
 
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Rome
 future:      true
-#pygments:    true
+pygments:    true
 highlighter: rouge
 markdown:    kramdown
 kramdown:
   extensions: ["strikethrough"]
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
 
 kramdown:
